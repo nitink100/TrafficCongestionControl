@@ -35,8 +35,8 @@ Follow these instructions to set up and run the project locally.
 
 1.  **Clone the Repository**
     ```bash
-    git clone [https://github.com/your-username/AI-Traffic-Control.git](https://github.com/your-username/AI-Traffic-Control.git)
-    cd AI-Traffic-Control
+    git clone https://github.com/your-username/AI-Traffic-Control.git
+    cd TrafficCongestionControl
     ```
 
 2.  **Create and Activate a Virtual Environment**
@@ -74,7 +74,7 @@ Follow these instructions to set up and run the project locally.
 Once the installation is complete, you can start the simulation.
 
 1.  **Navigate to the Root Directory**
-    Make sure you are in the main `AI-Traffic-Control` folder.
+    Make sure you are in the main `TrafficCongestionControl` folder.
 
 2.  **Run the Main Script**
     Execute the `simulation.py` file. A Pygame window will launch, displaying the live traffic simulation.
