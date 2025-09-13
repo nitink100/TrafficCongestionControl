@@ -2,8 +2,6 @@
 
 This project is an intelligent traffic control system designed to dynamically manage signal timing based on real-time vehicle density. It leverages the YOLO object detection algorithm to identify vehicles and adjusts signal phases to optimize traffic flow, all visualized through an interactive Pygame simulation.
 
-!(https://i.imgur.com/4x0y7yB.png)
-
 ---
 
 ## ✨ Key Features
