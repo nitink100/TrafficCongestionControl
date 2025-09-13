@@ -1,0 +1,9 @@
+# Python package requirements for the AI Traffic Control project
+# Note: A Python version of 3.6 or 3.7 is required for tensorflow==1.15.0
+
+tensorflow==1.15.0
+numpy
+opencv-python
+pygame
+cython
+matplotlib
