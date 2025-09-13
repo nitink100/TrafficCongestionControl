@@ -1,65 +1,85 @@
-AI-Powered Traffic Congestion Control System 🚦
-This project is an AI-driven traffic control system designed to dynamically manage signal timing based on real-time vehicle density. It uses the YOLO (You Only Look Once) object detection algorithm to identify vehicles and adjusts signal phases to optimize traffic flow and reduce congestion. The system is visualized through an interactive Pygame simulation.
+# AI-Powered Traffic Congestion Control System 🚦
 
-✨ Key Features
-Dynamic Signal Timing: Automatically adjusts traffic light green times based on live vehicle counts, reducing unnecessary waiting.
+This project is an intelligent traffic control system designed to dynamically manage signal timing based on real-time vehicle density. It leverages the YOLO object detection algorithm to identify vehicles and adjusts signal phases to optimize traffic flow, all visualized through an interactive Pygame simulation.
 
-Real-time Vehicle Detection: Utilizes the YOLO (You Only Look Once) algorithm via Darkflow to detect and classify vehicles from video frames.
+!(https://i.imgur.com/4x0y7yB.png)
 
-Vehicle Classification: Identifies different vehicle types (cars, bikes, buses, trucks) to calculate traffic density more accurately.
+---
 
-Interactive Simulation: A custom-built Pygame application provides a visual representation of the intersection, traffic flow, and dynamic signal changes.
+## ✨ Key Features
 
-🛠️ Tech Stack
-Core Logic: Python
+* **Dynamic Signal Timing:** Automatically adjusts traffic light green times based on live vehicle counts, reducing unnecessary waiting and congestion.
+* **Real-time Vehicle Detection:** Utilizes the YOLO (You Only Look Once) algorithm via the Darkflow library to detect and classify vehicles from video frames.
+* **Vehicle Classification:** Identifies different vehicle types (cars, bikes, buses, trucks) to calculate traffic density more accurately.
+* **Interactive Simulation:** A custom-built Pygame application provides a visual representation of the intersection, traffic flow, and dynamic signal changes.
 
-AI / Machine Learning: YOLO (Darknet), TensorFlow (via Darkflow), OpenCV
+---
 
-Simulation & UI: Pygame
+## 🛠️ Tech Stack
 
-Skills: Flask, Machine Learning
+* **Core Logic:** Python
+* **AI / Machine Learning:** YOLO (Darknet), TensorFlow 1.x (via Darkflow), OpenCV
+* **Simulation & UI:** Pygame
 
-🚀 Getting Started
-Follow these instructions to get a local copy up and running.
+---
 
-Prerequisites
-Python 3.6 / 3.7 (due to TensorFlow 1.x dependency for Darkflow)
+## 🚀 Getting Started
 
-Pip & a virtual environment tool
+Follow these instructions to set up and run the project locally.
 
-YOLOv2 model files (yolov2.weights and yolo.cfg)
+### Prerequisites
 
-Installation
-Clone the repository:
+* **Python 3.6 / 3.7** (This is critical for TensorFlow 1.x compatibility)
+* Pip (Python package installer)
+* YOLOv2 model files (`yolov2.weights` and `yolo.cfg`)
 
-git clone [https://github.com/your-username/AI-Traffic-Control.git](https://github.com/your-username/AI-Traffic-Control.git)
-cd AI-Traffic-Control
+### Installation Steps
 
-Create and activate a virtual environment:
+1.  **Clone the Repository**
+    ```bash
+    git clone [https://github.com/your-username/AI-Traffic-Control.git](https://github.com/your-username/AI-Traffic-Control.git)
+    cd AI-Traffic-Control
+    ```
 
-python3.7 -m venv venv
-source venv/bin/activate
+2.  **Create and Activate a Virtual Environment**
+    It's highly recommended to use a virtual environment to manage dependencies.
+    ```bash
+    # Make sure to use your Python 3.7 executable
+    python3.7 -m venv venv
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    ```
 
-Install dependencies:
+3.  **Install Required Packages**
+    Install all the necessary Python libraries using the `requirements.txt` file.
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-pip install -r requirements.txt
+4.  **Install Darkflow Manually**
+    The `darkflow` library requires a manual compilation step. Navigate into its directory and run the build command.
+    ```bash
+    # This command must be run from the root of the project
+    cd darkflow
+    python setup.py build_ext --inplace
+    cd ..
+    ```
 
-Install Darkflow:
-Navigate to the darkflow directory and run the build command.
+5.  **Place YOLO Model Files**
+    You need to download the pre-trained YOLOv2 model files and place them in the correct directory.
+    * Place your `yolov2.weights` file in `assets/model_files/bin/`.
+    * Place your `yolo.cfg` file in `assets/model_files/cfg/`.
 
-cd darkflow
-python setup.py build_ext --inplace
-cd ..
+---
 
-Place Model Files:
+## 🏃 How to Run the Simulation
 
-Place your yolov2.weights file in the assets/model_files/bin/ directory.
+Once the installation is complete, you can start the simulation.
 
-Place your yolo.cfg file in the assets/model_files/cfg/ directory.
+1.  **Navigate to the Root Directory**
+    Make sure you are in the main `AI-Traffic-Control` folder.
 
-🏃 How to Run
-To start the simulation, run the main script from the root directory:
-
-python simulation.py
-
-A Pygame window will launch, displaying the live traffic simulation.
+2.  **Run the Main Script**
+    Execute the `simulation.py` file. A Pygame window will launch, displaying the live traffic simulation.
+    ```bash
+    python simulation.py
+    ```
